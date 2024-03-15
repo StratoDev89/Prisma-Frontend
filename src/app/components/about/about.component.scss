@@ -1,0 +1,27 @@
+@use "../../../styles.scss" as s;
+
+.main-about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5% 0;
+  overflow: hidden;
+}
+
+.main-h2:nth-child(1) {
+  font-size: 6em;
+  margin-bottom: -2rem;
+}
+
+.main-h3 {
+  width: fit-content;
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  font-family: s.$primary-font;
+  text-transform: capitalize;
+}

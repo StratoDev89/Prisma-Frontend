@@ -1,0 +1,36 @@
+@use "../../../styles.scss" as s;
+
+form {
+  width: 100%;
+}
+
+fieldset {
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+
+  input {
+    font-family: s.$primary-font;
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.error {
+  display: block;
+  font-family: s.$primary-font;
+  text-align: center;
+  font-size: 0.7em;
+  color: rgb(237, 45, 45);
+  padding: 0.5rem;
+  width: 100%;
+}
+
+

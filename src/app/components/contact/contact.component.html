@@ -1,0 +1,24 @@
+<main class="main-contact img-bg">
+  <app-main-container>
+    <section class="main-section">
+      <div class="main-left text">
+        <h1>¡Trabajemos juntos!</h1>
+        <p>Llena el formulario y pongámonos en contacto.</p>
+        <ul class="socials">
+          @for (item of socialIcons; track item) {
+          <li><img [src]="item" style="width: 80%" /></li>
+          }
+        </ul>
+      </div>
+
+      <div class="main-right">
+        <div class="logo-container">
+          <app-logo />
+        </div>
+        <div class="form-container">
+          <app-form />
+        </div>
+      </div>
+    </section>
+  </app-main-container>
+</main>

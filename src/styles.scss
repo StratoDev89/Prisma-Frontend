@@ -1,1 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
+// Css Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+a,
+button {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// Global Vars
+$dark-blue: #042d5c;
+$blue: #597eaa;
+$dark-blue-opacity: #042d5c85;
+$primary-font: "Poppins", sans-serif;
+$secondary-font: "SweetSansProBold";
+$gradient: (to right, $dark-blue, $blue);
+$gradient-webkit: (left, $dark-blue, $blue);
+
+@font-face {
+  font-family: "SweetSansProBold";
+  src: url("assets/fonts/SweetSansProBold.otf") format("truetype");
+}
+
+// Global Classes
+.bg-gradient {
+  background: linear-gradient($gradient);
+  background: -webkit-linear-gradient($gradient-webkit);
+  background: -moz-linear-gradient($gradient-webkit);
+  background: -o-linear-gradient($gradient-webkit);
+}
+
+.img-bg {
+  background-image: url("assets/images/hero-bg.webp");
+  background-size: 105%;
+  background-position-x: 10%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.buttom {
+  width: 100%;
+  text-align: center;
+}
+
+.main-h2 {
+  font-size: 8em;
+  text-wrap: pretty;
+  font-weight: 600;
+  color: $blue;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: $primary-font;
+}
+
+
+// Mixings
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Lenis CSS setings
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

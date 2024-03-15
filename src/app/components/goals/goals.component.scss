@@ -1,0 +1,42 @@
+@use "../../../styles.scss" as s;
+
+.main-goals {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 5% 0;
+}
+
+
+.main-h2:nth-child(1) {
+  font-size: 6em;
+  margin-bottom: -2rem;
+}
+
+.goal {
+  display: flex;
+  width: 100%;
+
+  margin-top: 1rem;
+
+  .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 10%;
+    font-size: 5em;
+    line-height: 1;
+    font-family: s.$secondary-font;
+    color: s.$dark-blue;
+    transform: translateY(-10%);
+  }
+
+  .goal-title {
+    padding: 0.5rem;
+    text-wrap: pretty;
+    font-family: s.$primary-font;
+    font-size: 1.5em;
+    color: s.$blue;
+    font-weight: 600;
+  }
+}

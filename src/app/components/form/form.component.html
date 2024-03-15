@@ -1,0 +1,46 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+  <fieldset>
+    <input type="text" placeholder="Nombre y apellido" formControlName="name" />
+
+    @if (this.name?.invalid && this.name?.touched) {
+      <span class="error">El nombre y apellido son requeridos</span>
+    }
+  </fieldset>
+
+  <fieldset>
+    <input type="text" placeholder="especialidad" formControlName="specialty" />
+
+    @if (this.specialty?.invalid && this.specialty?.touched) {
+      <span class="error">La especialidad es requerida</span>
+    }
+  </fieldset>
+
+  <fieldset>
+    <input type="email" placeholder="Email" formControlName="email" />
+
+    @if (this.email?.hasError("required") && this.email?.touched) {
+      <span class="error">El email es requerido</span>
+    }
+
+    @if (this.email?.hasError("email") && this.email?.touched) {
+      <span class="error"
+        >El email debe cumplir con el formato john&#64;example.com</span
+      >
+    }
+  </fieldset>
+
+  <fieldset>
+    <input
+      type="number"
+      placeholder="Numero de celular"
+      formControlName="phone"
+    />
+
+    @if (this.phone?.invalid && this.phone?.touched) {
+      <span class="error">El numero de contacto es requerido</span>
+    }
+  </fieldset>
+  <div class="buttom">
+    <app-buttom type="submit" text="enviar" />
+  </div>
+</form>

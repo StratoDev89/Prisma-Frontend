@@ -1,0 +1,38 @@
+@use "../../../styles.scss" as s;
+
+button {
+  padding: .5rem 3.5rem;
+  border: unset;
+  border-radius: 50px;
+  border: 1px solid white;
+  color: white;
+  z-index: 1;
+  position: relative;
+  font-family: s.$primary-font;
+  font-weight: 400;
+  font-size: 1em;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: s.$dark-blue;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+button:hover::before {
+  width: 100%;
+}

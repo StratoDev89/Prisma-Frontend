@@ -1,0 +1,11 @@
+<nav #nav>
+  <div class="logo-container">
+    <app-animated-logo />
+  </div>
+  <ul class="nav-options">
+    @for (item of options; track item) {
+      <li #option class="text">{{ item }}</li>
+    }
+  </ul>
+  <div class="nav-contact text"><a>contacto</a></div>
+</nav>

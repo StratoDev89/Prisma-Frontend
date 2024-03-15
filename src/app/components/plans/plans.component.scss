@@ -1,0 +1,13 @@
+@use "../../../styles.scss" as s;
+
+.main-plans {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5% 0;
+  overflow: hidden;
+}
+
+.main-h2:nth-child(1) {
+  font-size: 6em;
+  margin-bottom: -2rem;
+}

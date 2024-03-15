@@ -1,0 +1,62 @@
+<main #trigger class="main-horizontal">
+  <div #horizontal class="div-horizontal">
+    @for (item of info; track item.id) {
+      <section class="section-first">
+        <app-main-container>
+          <div #text class="container">
+            <div class="div-number text">{{ item.id }}</div>
+            <div class="div-info">
+              <h1 class="section-h1 text">
+                {{ item.title }}
+              </h1>
+              <p class="section-p text">
+                {{ item.text }}
+              </p>
+            </div>
+          </div>
+        </app-main-container>
+      </section>
+    }
+  </div>
+</main>
+
+<!-- <section class="section-first">
+      <app-main-container>
+        <div class="div-number text">01</div>
+        <div class="div-info">
+          <h1 class="section-h1 text">
+            hablamos tu idioma para potenciar tu éxito
+          </h1>
+          <p class="section-p text">
+            Nos destacamos por comunicarnos de manera clara y accesible,
+            evitando tecnicismos confusos. Tu éxito es nuestra prioridad, y la
+            simplicidad en la comunicación es clave para lograrlo.
+          </p>
+        </div>
+      </app-main-container>
+    </section>
+
+    <section class="section-second">
+      <app-main-container>
+        <div class="div-number text">02</div>
+        <div class="div-info">
+          <h1 class="section-h1 text">enfoque personalizado</h1>
+          <p class="section-p text">
+            cada estrategia es única. trabajamos estrechamente contigo para
+            entender tus objetivos y crear campañas que puedan lograrlos.
+          </p>
+        </div>
+      </app-main-container>
+    </section>
+    <section class="section-third">
+      <app-main-container>
+        <div class="div-number text">03</div>
+        <div class="div-info">
+          <h1 class="section-h1 text">resultados medibles</h1>
+          <p class="section-p text">
+            nos comprometemos a obtener resultados tangibles. utilizamos análisis y métricas para evaluar el éxito de cada campaña.
+          </p>
+        </div>
+      </app-main-container>
+    </section>
+    -->

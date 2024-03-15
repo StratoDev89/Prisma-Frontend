@@ -1,0 +1,83 @@
+@use "../../../styles.scss" as s;
+
+.main-horizontal {
+  height: 100vh;
+
+  .div-horizontal {
+    display: flex;
+    min-width: 100%;
+    height: 100%;
+
+    section {
+      position: relative;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      min-width: 100%;
+      height: 100%;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to top, #042d5cae, #042d5c26);
+      }
+    }
+  }
+
+  .section-first {
+    background-image: url("../../../assets/images/img-doc-1.webp");
+  }
+
+  // .section-second {
+  //   background-image: url("../../../assets/images/img-doc-1.webp");
+  // }
+
+  // .section-third {
+  //   background-image: url("../../../assets/images/img-doc-1.webp");
+  // }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: self-start;
+  width: 100%;
+  height: 80vh;
+  margin-top: 15vh;
+
+  .div-number {
+    font-size: 6.5em;
+    font-weight: 600;
+  }
+
+  .div-info {
+    width: 100%;
+
+    .section-h1 {
+      text-transform: uppercase;
+      text-wrap: balance;
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+
+    .section-p {
+      text-transform: capitalize;
+      text-wrap: pretty;
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+  }
+}
+
+.text {
+  position: relative;
+  font-family: s.$primary-font;
+  color: white;
+  z-index: 1;
+  padding: 0.5rem;
+}
