@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild, input } from '@angular/core';
 import Atropos from 'atropos';
-import 'atropos/css';
 import { Testimonial } from '../testimonials/testimonials.component';
 
 @Component({
