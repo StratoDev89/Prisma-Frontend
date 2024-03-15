@@ -37,9 +37,9 @@ export class NavComponent {
       tl.to(
         this.nav.nativeElement,
         {
-          backgroundColor: '#042d5c63',
-          duration: 0.8,
-          ease: smoothEase,
+          // backgroundColor: '#042d5c63',
+          // duration: 0.8,
+          // ease: smoothEase,
         },
         '0',
       )
@@ -56,8 +56,8 @@ export class NavComponent {
         .to(
           this.nav.nativeElement,
           {
-          backdropFilter: 'blur(.5em)',
-            duration: 0,
+          // backdropFilter: 'blur(.5em)',
+          //   duration: 0,
           },
           '0',
         );

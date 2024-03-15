@@ -1,7 +1,7 @@
 <main #trigger class="main-horizontal">
   <div #horizontal class="div-horizontal">
     @for (item of info; track item.id) {
-      <section class="section-first">
+      <section class="section-first" style="background-image: url('{{ item.srcImg }}')">
         <app-main-container>
           <div #text class="container">
             <div class="div-number text">{{ item.id }}</div>
