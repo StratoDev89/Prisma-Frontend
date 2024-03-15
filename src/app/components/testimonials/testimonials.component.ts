@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
+import { AtroposComponent } from '../atropos/atropos.component';
 
+export interface Testimonial {
+  name: string;
+  area: string;
+  title: string;
+  achievements: string[];
+}
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [],
+  imports: [AtroposComponent],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.scss',
 })
 export class TestimonialsComponent {
-  info = [
+  testimonials: Testimonial[] = [
     {
       name: 'Dr. Andrés Parra Petit',
       area: 'Medicina Física y Rehabilitación',

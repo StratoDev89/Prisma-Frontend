@@ -1,1 +1,7 @@
-<p>testimonials works!</p>
+<main class="main-testimonials">
+  @for (testimonial of testimonials; track testimonial) {
+    <div class="div-atropos">
+      <app-atropos [testimonial]="testimonial" />
+    </div>
+  }
+</main>

@@ -7,6 +7,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { LenisService } from './services/lenis.service';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,6 +19,7 @@ import { LenisService } from './services/lenis.service';
     AboutComponent,
     ContactComponent,
     PlansComponent,
+    TestimonialsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

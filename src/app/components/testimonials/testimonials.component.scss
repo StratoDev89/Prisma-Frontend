@@ -1,0 +1,18 @@
+@use "../../../styles.scss" as s;
+
+.main-testimonials {
+  @include s.flex-center;
+  flex-direction: column;
+  row-gap: 4rem;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem;
+
+  // background-color: lightblue;
+
+  .div-atropos {
+    width: 50%;
+    height: 80vh;
+    // background: peru;
+  }
+}

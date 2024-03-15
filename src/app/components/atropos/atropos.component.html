@@ -1,0 +1,21 @@
+<div #myAtropos class="atropos my-atropos">
+  <div class="atropos-scale">
+    <div class="atropos-rotate">
+      <div class="atropos-inner">
+        <div class="card">
+          <div class="video">video</div>
+          <div class="info bg-gradient">
+            <h1 data-atropos-offset="4">{{ testimonial()?.name }}</h1>
+            <h2 data-atropos-offset="2">{{ testimonial()?.area }}</h2>
+            <h3 data-atropos-offset="1">{{ testimonial()?.title }}</h3>
+            <ul data-atropos-offset="1">
+              @for (item of testimonial()?.achievements; track item) {
+                <li>- {{ item }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
