@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, input } from '@angular/core';
+import { Component, ElementRef, NgZone, ViewChild, input } from '@angular/core';
 import Atropos from 'atropos';
 import { Testimonial } from '../testimonials/testimonials.component';
 
@@ -15,10 +15,13 @@ export class AtroposComponent {
 
   testimonial = input<Testimonial>();
 
+  constructor(private ngZone: NgZone) {}
+
   ngAfterViewInit() {
-    const myAtropos = Atropos({
-      el: this.myAtropos.nativeElement,
-      // rest of parameters
+    this.ngZone.runOutsideAngular(() => {
+      const myAtropos = Atropos({
+        el: this.myAtropos.nativeElement,
+      });
     });
   }
 }

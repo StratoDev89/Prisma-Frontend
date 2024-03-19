@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CustomEase } from 'gsap/CustomEase';
@@ -7,8 +7,10 @@ import { CustomEase } from 'gsap/CustomEase';
   providedIn: 'root',
 })
 export class GsapService {
-  private constructor() {
-    gsap.registerPlugin(ScrollTrigger, CustomEase);
+  private constructor(private ngZone: NgZone) {
+    this.ngZone.runOutsideAngular(() => {
+      gsap.registerPlugin(ScrollTrigger, CustomEase);
+    });
     CustomEase.create('smooth', '0.5, 0.5, 0, 1');
   }
 
