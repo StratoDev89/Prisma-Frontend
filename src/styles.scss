@@ -1,4 +1,5 @@
-@import 'atropos/scss';
+@import "atropos/scss";
+
 // Css Reset
 * {
   margin: 0;
@@ -26,6 +27,19 @@ $primary-font: "Poppins", sans-serif;
 $secondary-font: "SweetSansProBold";
 $gradient: (to right, $dark-blue, $blue);
 $gradient-webkit: (left, $dark-blue, $blue);
+
+::-webkit-scrollbar {
+  width: 10px;
+  padding: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $dark-blue;
+  border-radius: 10px;
+}
 
 @font-face {
   font-family: "SweetSansProBold";
@@ -72,7 +86,8 @@ $gradient-webkit: (left, $dark-blue, $blue);
 }
 
 // Lenis CSS setings
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 

@@ -37,18 +37,19 @@ export class NavComponent {
       tl.to(
         this.nav.nativeElement,
         {
-          // backgroundColor: '#042d5c63',
-          // duration: 0.8,
-          // ease: smoothEase,
+          backgroundColor: 'transparent',
+          duration: .8,
+          ease: smoothEase,
         },
         '0',
       )
         .to(
           options,
           {
+            color:'transparent',
             yPercent: -100,
-            duration: 0.7,
-            stagger: 0.1,
+            duration: 0.6,
+            stagger: 0.08,
             ease: smoothEase,
           },
           '0',
